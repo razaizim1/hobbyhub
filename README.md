@@ -45,6 +45,42 @@ HobbyHub encourages **social engagement through shared passions**. Whether you'r
 
 ---
 
+## Setup and Installation
+
+Follow these steps to set up the project locally:
+
+1.  **Clone the repository**:
+    ```bash
+    git clone <repository_url>
+    cd b11a11-client-site
+    ```
+
+2.  **Install dependencies**:
+    ```bash
+    npm install
+    ```
+
+3.  **Environment Variables**:
+    Create a `.env` file in the root of the `b11a11-client-site` directory and add your Firebase configuration (if applicable) and any other client-side environment variables.
+
+    ```
+    # Example .env content (replace with your actual Firebase config)
+    VITE_API_KEY=your_firebase_api_key
+    VITE_AUTH_DOMAIN=your_firebase_auth_domain
+    VITE_PROJECT_ID=your_firebase_project_id
+    VITE_STORAGE_BUCKET=your_firebase_storage_bucket
+    VITE_MESSAGING_SENDER_ID=your_firebase_messaging_sender_id
+    VITE_APP_ID=your_firebase_app_id
+    ```
+
+## Running the Application
+
+To start the development server:
+
+```bash
+npm run dev
+```
+
 ## 🔐 Environment Variables
 
 To set up the project locally, create a `.env` file in the root directory and include your Firebase config:
