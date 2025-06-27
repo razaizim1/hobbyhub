@@ -3,7 +3,7 @@ import React from 'react';
 const Cta = () => {
     return (
         <section className="py-10 bg-[#f9f9f9] text-gray-900 dark:bg-black">
-            <div className="container mx-auto flex flex-col justify-around p-6 text-center md:p-10 lg:flex-row">
+            <div className="container mx-auto flex flex-col justify-between pb-28 text-center lg:flex-row">
                 <div className="flex flex-col justify-center lg:text-left">
                     <p className="mb-1 text-sm font-medium tracking-widest uppercase text-green-600">Available Now</p>
                     <h1 className="py-2 text-3xl font-semibold leading-tight title-font dark:text-white">

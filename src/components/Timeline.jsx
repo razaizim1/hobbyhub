@@ -3,7 +3,7 @@ import React from 'react';
 const Timeline = () => {
     return (
         <section className="bg-gray-50 text-gray-800 dark:bg-black">
-            <div className="container max-w-5xl px-4 py-12 mx-auto">
+            <div className="container max-auto py-28 mx-auto">
                 <div className="grid gap-4 mx-4 sm:grid-cols-12">
                     <div className="col-span-12 sm:col-span-3">
                         <div className="text-center sm:text-left mb-14 before:block before:w-24 before:h-3 before:mb-5 before:rounded-md before:mx-auto sm:before:mx-0 before:bg-[#4BAF47]">
