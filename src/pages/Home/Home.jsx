@@ -5,6 +5,7 @@ import Cta from '../../components/Cta';
 import { useLoaderData, useNavigation } from 'react-router';
 import FeaturedGroups from '../../components/FeaturedGroups';
 import Loader from '../../components/Loader';
+import Stats from '../../components/Stats';
 
 const Home = () => {
     const groups = useLoaderData();
@@ -32,6 +33,7 @@ const Home = () => {
                     </div>
                 </div>
             </div>
+            <Stats></Stats>
             <Timeline></Timeline>
             <Cta></Cta>
         </div>

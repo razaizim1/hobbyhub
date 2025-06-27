@@ -16,6 +16,12 @@ import Registration from './pages/Registraton/Registration.jsx';
 import MyGroups from './pages/MyGroups/MyGroups.jsx';
 import ErrorPage from './pages/ErrorPage/ErrorPage.jsx';
 import PrivateRoute from './routes/PrivateRoute.jsx';
+import About from './pages/About/About.jsx';
+import Dashboard from './pages/Dashboard/Dashboard.jsx';
+import Overview from './pages/Dashboard/Overview.jsx';
+import AllItems from './pages/Dashboard/AllItems.jsx';
+import AddItem from './pages/Dashboard/AddItem.jsx';
+import MyItems from './pages/Dashboard/MyItems.jsx';
 
 const router = createBrowserRouter([
   {
@@ -37,12 +43,14 @@ const router = createBrowserRouter([
         Component: Registration
       },
       {
+        path: "about",
+        Component: About
+      },
+      {
         path: "allgroups",
         loader: () => fetch('https://b11a10-server-site.vercel.app/hobby'),
         element: (
-          <PrivateRoute>
             <AllGroups />
-          </PrivateRoute>
         ),
         hydrateFallbackElement: (
           <div className="flex justify-center items-center min-h-[200px]">
@@ -76,6 +84,20 @@ const router = createBrowserRouter([
         path: "groupdetails/:id",
         loader: ({ params }) => fetch(`https://b11a10-server-site.vercel.app/hobby/${params.id}`),
         Component: GroupDetails
+      },
+      {
+        path: "dashboard",
+        element: (
+          <PrivateRoute>
+            <Dashboard />
+          </PrivateRoute>
+        ),
+        children: [
+          { index: true, element: <Overview /> },
+          { path: "all-items", element: <AllItems /> },
+          { path: "add-item", element: <AddItem /> },
+          { path: "my-items", element: <MyItems /> },
+        ]
       },
     ]
   },
